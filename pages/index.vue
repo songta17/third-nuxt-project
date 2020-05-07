@@ -9,8 +9,18 @@
         My doozie Nuxt.js project
       </h2>
       <div class="links">
-        <nuxt-link to="/products">products</nuxt-link>
+        <!-- <nuxt-link to="/products">products</nuxt-link>
         <nuxt-link to="/book">book</nuxt-link>
+        <nuxt-link to="/car">Car link</nuxt-link>
+        <nuxt-link to="/plane">Plane link</nuxt-link>
+         -->
+<!--         <input type="text" v-model="userId">
+        <button @click="onLoadUser">Load input</button> -->
+
+        <input type="text" v-model="userId">
+        <button @click="onLoad">Load</button>
+
+
         <a
           href="https://nuxtjs.org/"
           target="_blank"
@@ -36,8 +46,53 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+    // data(){
+    //   return {
+    //     userId:''
+    //   }
+    // },
+    // methods: {
+    //   onLoadUser() {
+    //     this.$router.push('/car/' + this.userId)
+    //   }
+    // }
+
+    data() {
+      return {
+        userId:''
+      }
+    },
+    methods: {
+      onLoad() {
+        this.$router.push('/car/' + this.userId)
+      }
+    }
+
+
   }
-}
+
+
+
+
+
+
+
+
+// }
+
+// export default{
+//   data(){
+//     return {
+//       userId:''
+//     }
+//   },
+//   methods: {
+//     onLoadUser() {
+//       this.$router.push('/car/' + this.userId)
+//     }
+//   }
+// }
 </script>
 
 <style>
