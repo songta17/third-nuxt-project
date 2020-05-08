@@ -17,9 +17,14 @@
 <!--         <input type="text" v-model="userId">
         <button @click="onLoadUser">Load input</button> -->
 
+        <input type="text" v-model="dvdId">
+        <button @click="onLoadDvd()">Load Dvd ID</button>
+
+        <nuxt-link to="/washing_machine/">go to washing machine</nuxt-link>
+<!--
         <input type="text" v-model="userId">
         <button @click="onLoad">Load</button>
-
+ -->
 
         <a
           href="https://nuxtjs.org/"
@@ -58,19 +63,29 @@ export default {
     //   }
     // }
 
-    data() {
-      return {
-        userId:''
-      }
-    },
-    methods: {
-      onLoad() {
-        this.$router.push('/car/' + this.userId)
-      }
+    // data() {
+    //   return {
+    //     userId:''
+    //   }
+    // },
+    // methods: {
+    //   onLoad() {
+    //     this.$router.push('/car/' + this.userId)
+    //   }
+    // },
+
+  data() {
+    return {
+      dvdId:''
     }
-
-
+  },
+  methods: {
+    onLoadDvd() {
+      this.$router.push('/dvd/' + this.dvdId)
+    }
   }
+}
+
 
 
 

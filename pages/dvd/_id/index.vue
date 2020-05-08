@@ -1,5 +1,5 @@
 <template>
-  <h1>Products: {{ $route.params.id }} </h1>
+  <h1>DVD avec params, methode numéro 2: {{ $route.params.id }}</h1>
 </template>
 <script>
   export default {
@@ -13,5 +13,3 @@
   }
 }
 </script>
-
-
